@@ -2,12 +2,14 @@ package com.kitteninorbit.soccerapi.controller;
 
 import com.kitteninorbit.soccerapi.model.Match;
 import com.kitteninorbit.soccerapi.repository.MatchRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/matches")
 public class MatchController {

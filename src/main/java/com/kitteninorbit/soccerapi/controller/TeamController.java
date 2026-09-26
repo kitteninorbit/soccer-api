@@ -2,12 +2,14 @@ package com.kitteninorbit.soccerapi.controller;
 
 import com.kitteninorbit.soccerapi.model.Team;
 import com.kitteninorbit.soccerapi.repository.TeamRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/teams")
 public class TeamController {
