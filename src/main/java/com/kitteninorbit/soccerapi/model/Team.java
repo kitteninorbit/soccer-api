@@ -16,4 +16,7 @@ public class Team {
 
     @Column(columnDefinition = "TEXT")
     private String logoUrl;
+
+    @Column(name = "instagram_url", columnDefinition = "TEXT")
+    private String instagramUrl;
 }
