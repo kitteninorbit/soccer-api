@@ -1,0 +1,25 @@
+package com.kitteninorbit.soccerapi.controller;
+
+import com.kitteninorbit.soccerapi.model.Team;
+import com.kitteninorbit.soccerapi.repository.TeamRepository;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/teams")
+public class TeamController {
+
+    private final TeamRepository teamRepository;
+
+    public TeamController(TeamRepository teamRepository) {
+        this.teamRepository = teamRepository;
+    }
+
+    @GetMapping
+    public List<Team> getAllTeams() {
+        return teamRepository.findAll();
+    }
+}
