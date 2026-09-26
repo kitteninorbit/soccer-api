@@ -14,5 +14,6 @@ public class Team {
     @Column(nullable = false)
     private String name;
 
+    @Column(columnDefinition = "TEXT")
     private String logoUrl;
 }
