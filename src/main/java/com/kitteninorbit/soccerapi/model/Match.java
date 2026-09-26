@@ -38,4 +38,8 @@ public class Match {
     @OneToMany(mappedBy = "match", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Broadcast> broadcasts = new ArrayList<>();
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "competition_id", nullable = false)
+    private Competition competition;
 }
