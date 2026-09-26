@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://jogo-delas.vercel.app")
 @RestController
 @RequestMapping("/api/matches")
 public class MatchController {
